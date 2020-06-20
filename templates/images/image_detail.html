@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Detail</title>
+</head>
+<body>
+    {% for image_ in image %}
+    <img src="{{ MEDIA_URL }}{{ image_.image.url }}" width="{{ sizes.0 }}" height="{{ sizes.1 }}">
+    {% endfor %}
+</body>
+</html>

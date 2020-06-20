@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload your image</title>
+</head>
+<body>
+    <form enctype="multipart/form-data" method="post">{% csrf_token %}
+        <tr><td>{{ form.as_p }}</td></tr>
+        <tr><td><button type="submit" class="btn">Submit</button></td></tr>
+    </form>
+</body>
+</html>

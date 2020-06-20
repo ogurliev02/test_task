@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Images List</title>
+</head>
+<body>
+    <style type="text/css">
+        .image { 
+         height: 250px;
+         width: 150px;
+        }
+    </style>
+    {% for image in images_list %}
+        <a href="{{ image.url }}/">
+        <img src="{{ MEDIA_URL }}{{ image.image.url }}" class="image">
+        </a>
+    {% endfor %}
+
+    <br>
+    <a href="/upload">
+        <button>Перейти на страницу загрузки изображения</button>
+    </a>
+</body>
+</html>
